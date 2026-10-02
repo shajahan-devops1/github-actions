@@ -1,0 +1,22 @@
+name: Hello World
+
+# Trigger workflow on push to main branch or manual dispatch
+on:
+  push:
+    branches:
+      - main
+
+jobs:                       #stages in jenkins pipeline
+  hello-world-job:          # Job name/stage in jenkins pipeline
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner/agent
+
+    steps:
+      # Step 1: Run a simple Hello World script
+      - name: Print Hello World
+        run: echo "Hello World from GitHub Actions!"
+
+      # Step 2: Run a multi-line script
+      - name: Multi-line greeting
+        run: |
+          echo "This is a multi-line message."
+          echo "GitHub Actions is working!"
