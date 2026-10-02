@@ -3,8 +3,7 @@ name: Hello World
 # Trigger workflow on push to main branch or manual dispatch
 on:
   push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:                       #stages in jenkins pipeline
   hello-world-job:          # Job name/stage in jenkins pipeline
