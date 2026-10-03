@@ -1,0 +1,12 @@
+name: call another workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  feature-workflow:
+    uses: shajahan-devops1/workflows/.github/workflows/nodejs-eks.yaml@main
+    with:
+      project: roboshop
+      component: catalogue
+      
